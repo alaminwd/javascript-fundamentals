@@ -1,0 +1,1 @@
+console.log(text5.substring(6));
