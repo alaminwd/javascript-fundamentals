@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Click('onclick success')">onclick event</button>
+    <button onmouseover="mouseOver('mouse over')">mouseover</button>
+    <button onmouseout="mouseOut('mouse Out')">mouse out</button>
+
+<!-- 
+    <input type="text" onchange="Onchange(event)">
+    <input type="text" onkeyup="Onkeyup(event)">
+    <input type="text" onkeydown="Onkeydown(event)"> -->
+
+    <input type="text" onchange="Onchange(this.value)">
+    <input type="text" onkeyup="Onkeyup(this.value)">
+    <input type="text" onkeydown="Onkeydown(this.value)">
+
+
+</body>
+
+<script>
+
+    function Onchange(event) {
+    console.log("change"+" "+event);
+    }
+
+    function Onkeyup(event) {
+        console.log("onkeyup"+" "+event);
+    }
+
+    function Onkeydown(event) {
+        console.log("onkeydown"+" "+event);
+    }
+
+
+    function Click(event){
+        console.log(event);
+        
+    }
+    function mouseOver(event){
+        console.log(event);
+        
+    }
+    function mouseOut(event){
+        console.log(event);
+    }
+
+
+
+
+
+</script>
+
+</html>

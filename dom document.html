@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document DOM</title>
+</head>
+
+<body>
+
+<h2 id="demo"></h2>
+
+<button onclick="showTitle()">Title</button>
+<button onclick="showDomain()">Domain</button>
+<button onclick="showURL()">URL</button>
+<button onclick="showCookie()">Cookie</button>
+<button onclick="showDate()">Date</button>
+
+<script>
+
+function showTitle(){
+document.getElementById("demo").innerHTML = document.title;
+}
+
+function showDomain(){
+document.getElementById("demo").innerHTML = document.domain;
+}
+
+function showURL(){
+document.getElementById("demo").innerHTML = document.URL;
+}
+
+function showCookie(){
+document.getElementById("demo").innerHTML = document.cookie;
+}
+
+function showDate(){
+document.getElementById("demo").innerHTML = new Date();
+}
+
+</script>
+
+</body>
+</html>

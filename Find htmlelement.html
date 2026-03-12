@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="Myelemt"></h1>
+
+    <p class="myElement">P1</p>
+    <p class="myElement"></p>
+
+    <h3 name="findName"></h3>
+    <h3 name="findName"></h3>
+
+    <span></span>
+    <br>
+    <span></span>
+
+
+</body>
+
+<script>
+    let Myelement = document.getElementById('Myelemt');
+    Myelement.innerHTML = "Hello world"
+
+    let myElement = document.getElementsByClassName('myElement');
+    myElement[0].innerHTML = " First element !"
+    myElement[1].innerHTML = " Second element !"
+
+    let tagsName = document.getElementsByTagName('span');
+    tagsName[0].innerHTML = "Hello Span"
+    tagsName[1].innerHTML = "Hello Span"
+    
+    let findName = document.getElementsByName('findName');
+    findName[0].innerHTML = "Find element by name attributes 1"
+    findName[1].innerHTML = "Find element by name attributes 2"
+
+
+</script>
+
+</html>

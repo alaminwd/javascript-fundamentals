@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="submit" onclick="alertObjct()">Alert</button>
+    <button type="submit" onclick="confirmObject()">Confirm</button>
+    <button type="submit" onclick="setTimeout()">setTime out</button>
+</body>
+
+<script>
+
+    function alertObjct (){
+        // document.write("alert success")
+        alert("alert success");
+    }
+    function confirmObject (){
+        // document.write("alert success")
+        let result = confirm("Are you sure?");
+        document.write(result)
+    }
+
+     setTimeout(() => {
+        alert('time set')
+    }, 1000);
+
+</script>
+</html>
