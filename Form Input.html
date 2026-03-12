@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #f5f6fa; /* light soft background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .calculator-card {
+        background-color: #ffffff; /* white card */
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12); /* soft shadow for premium look */
+        width: 100%;
+        max-width: 400px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .calculator-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 700;
+        color: #2c3e50; /* dark premium heading */
+        margin-bottom: 30px;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #34495e;
+    }
+
+    .form-control, select {
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-size: 1rem;
+        border: 1px solid #dcdde1;
+        box-shadow: inset 0 3px 6px rgba(0,0,0,0.03);
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus, select:focus {
+        border-color: #2980b9; /* premium focus color */
+        box-shadow: 0 0 10px rgba(41,128,185,0.3);
+    }
+
+    .btn-calc {
+        width: 100%;
+        padding: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-radius: 12px;
+        background-color: #2980b9; /* premium blue button */
+        color: #fff;
+        border: none;
+        transition: 0.3s ease;
+    }
+
+    .btn-calc:hover {
+        background-color: #1c5980; /* darker on hover */
+        transform: scale(1.03);
+    }
+
+    h2#Output {
+        margin-top: 25px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.3rem;
+        padding: 15px;
+        border-radius: 15px;
+        background: #ecf0f1; /* soft light grey for output */
+        color: #2c3e50;
+        box-shadow: inset 0 4px 6px rgba(0,0,0,0.05);
+        transition: background 0.3s ease;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="calculator-card">
+    <h3 class="text-center mb-4">Simple Calculator</h3>
+    <form onsubmit="return false">
+        <div class="mb-3">
+            <label for="num1" class="form-label">First number</label>
+            <input id="num1" type="number" class="form-control" placeholder="Enter first number">
+        </div>
+        <div class="mb-3">
+            <label for="num2" class="form-label">Second number</label>
+            <input id="num2" type="number" class="form-control" placeholder="Enter second number">
+        </div>
+        <div class="mb-3">
+            <label for="num2" class="form-label">Select Operator</label>
+            <select id="operators" class="form-select">
+                <option value="">--Select Operator--</option>
+                <option value="addition">Addition (+)</option>
+                <option value="subtraction">Subtraction (-)</option>
+                <option value="multiplication">Multiplication (×)</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary btn-calc" onclick="result()">Calculate</button>
+    </form>
+
+    <h2 id="Output">Result is = 0</h2>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function result(){
+    let num1 = Number(document.getElementById('num1').value);
+    let num2 = Number(document.getElementById('num2').value);
+    let operators = document.getElementById('operators');
+    if(operators.value == "addition"){
+         let sum = num1 + num2; 
+        document.getElementById('Output').innerHTML = "Result is = " + sum;
+    }
+    else if(operators.value == "subtraction"){
+        let subtraction = num1 - num2; 
+        document.getElementById('Output').innerHTML = "Result is = " + subtraction;
+    }
+    else if(operators.value == "multiplication"){
+        let multiplication = num1 * num2; 
+        document.getElementById('Output').innerHTML = "Result is = " + multiplication; // fixed variable
+    }
+   
+}
+</script>
+
+</body>
+</html>
