@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM CSS Class Example</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+</style>
+
+</head>
+
+<body class="p-5">
+
+<!-- <h1 id="bang" class="">Hello Bangladesh</h1> -->
+
+<h1 id="bang" >Hello Bangladesh</h1>
+
+
+    <div class="mt-5">
+        <button class="btn btn-success " onclick="addStyle()">Add Style</button>
+        <button class="btn btn-danger" onclick="removeStyle()">Remove Style</button>
+    </div> 
+
+<script>
+
+function addStyle(){
+    let bang = document.getElementById('bang');
+    bang.setAttribute('style', "background-color:green ; color:#fff; padding:10px 20px; display:inline; border-radius:5px")
+
+
+    // let bang = document.getElementById('bang');
+    // bang.setAttribute('class', "text-success")
+
+    // let bang = document.getElementById('bang');
+    // bang.classList.add('text-success');
+}
+
+function removeStyle(){
+
+    let bang = document.getElementById('bang');
+    bang.removeAttribute('style')
+
+    // let bang = document.getElementById('bang');
+    // bang.setAttribute('class', " ");
+    
+    // let bang = document.getElementById('bang');
+    // bang.classList.remove('text-success');
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
